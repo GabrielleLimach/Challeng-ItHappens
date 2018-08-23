@@ -1,5 +1,5 @@
 CREATE TABLE produtos(
-  Id serial NOT NULL,
+  idproduto serial NOT NULL,
   nome varchar (20),
   qtd int,
 )
@@ -12,7 +12,17 @@ CREATE TABLE filial(
 )
 CREATE TABLE estoque(
  idestoque BIGSERIAL NOT NULL,
- quantidade int,
+ quantidade int
+)
+
+CREATE TABLE pedidoestoque(
+  idpedido BIGSERIAL PRIMARY KEY NOT NULL,
+  fk_produto BIGSERIAL NOT NULL,
+
+
+)
+
+CREATE TABLE itempedidoestoque(
 
 
 )
